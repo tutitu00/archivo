@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profil Pengguna &amp; Pengaturan - Archivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#0e5138",
+                        "surface-container-high": "#e6e8ea",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#95d4b3",
+                        "tertiary-fixed": "#d2e4ff",
+                        "secondary-container": "#aeeecb",
+                        "on-primary": "#ffffff",
+                        "secondary": "#2c694e",
+                        "outline-variant": "#c4c6cf",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed": "#001d37",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#9fcaff",
+                        "inverse-primary": "#adc7f7",
+                        "on-surface-variant": "#43474e",
+                        "background": "#f7f9fb",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1a365d",
+                        "surface-variant": "#e0e3e5",
+                        "outline": "#74777f",
+                        "tertiary-container": "#003762",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#00213e",
+                        "secondary-fixed": "#b1f0ce",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#001b3c",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#455f88",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed-dim": "#adc7f7",
+                        "on-secondary-container": "#316e52",
+                        "primary": "#002045",
+                        "on-primary-container": "#86a0cd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed": "#002114",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-container": "#58a2f0",
+                        "on-tertiary-fixed-variant": "#00497e",
+                        "on-primary-fixed-variant": "#2d476f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "touch-target-min": "48px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-xl": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex font-body-md">
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-surface dark:bg-inverse-surface h-screen w-64 fixed left-0 top-0 border-r border-outline-variant dark:border-outline flex-col p-unit z-50">
+<div class="px-4 py-6 mb-4">
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary">Archivo</h1>
+<p class="text-label-md font-label-md text-on-surface-variant mt-1">Operational Unit 04</p>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-label-lg font-label-lg">Dasbor</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="tambah.html">
+<span class="material-symbols-outlined">note_add</span>
+<span class="text-label-lg font-label-lg">Tambah Dokumen</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="cari.html">
+<span class="material-symbols-outlined">location_on</span>
+<span class="text-label-lg font-label-lg">Cari &amp; Lacak</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="log-audit.html">
+<span class="material-symbols-outlined">history</span>
+<span class="text-label-lg font-label-lg">Log Audit</span>
+</a>
+<!-- Active Tab -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold scale-95 duration-100 ease-in-out" href="pengaturan.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-label-lg font-label-lg">Pengaturan</span>
+</a>
+</div>
+<div class="mt-auto pt-4">
+<a class="w-full flex items-center justify-center gap-2 h-touch-target-min bg-primary text-on-primary rounded-lg text-label-lg font-label-lg hover:bg-tertiary transition-colors" href="tambah.html">
+<span class="material-symbols-outlined">add</span>
+                Entri Arsip Baru
+            </a>
+</div>
+</nav>
+
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col md:ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface-bright dark:bg-surface-dim sticky top-0 w-full z-40 border-b border-outline-variant flex justify-between items-center h-touch-target-min px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-4 flex-1">
+<h1 class="text-headline-md font-headline-md font-extrabold text-primary md:hidden">Archivo</h1>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-opacity opacity-100 hover:opacity-80 flex items-center justify-center w-10 h-10 rounded-full" onclick="window.location.href='log-audit.html'">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-opacity opacity-100 hover:opacity-80 flex items-center justify-center w-10 h-10 rounded-full" onclick="alert('Pengaturan Akun Archivo')">
+<span class="material-symbols-outlined">help</span>
+</button>
+<a class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 cursor-pointer block" href="pengaturan.html">
+<img alt="Staff User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK2WoUYQMCbXUf0fandywbwy_pqW-jOsVS67kfD7bwRyYyuyGX1m3L22Nc8GYg45OXwTxTf08c2vrJWQR819VITnv73iXbkq1U1Fk-wS7hep_fszAU37cM26_JN_si_DTQDbl7pGa8_Nd9I5g1o_U6PGDTTkZWaafhCyjE2f5kuerMInH6_zdbzIlx6BlpuPK9cRKHW5hY-DTV5z7mUyYoQnQvV6q15_yVaf8xMeJpowR6xQyJAB2zrOwI0oqCcILjq8g4K2e1o0I"/>
+</a>
+</div>
+</header>
+
+<!-- Main Content Area -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop w-full max-w-container-max mx-auto">
+<!-- Page Header -->
+<div class="mb-8 flex justify-between items-center">
+<div>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-surface font-bold">Profil Staf &amp; Pengaturan</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-2">Kelola informasi pribadi, hak akses brankas, dan preferensi akun Anda.</p>
+</div>
+<a class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-high text-primary font-semibold rounded-lg hover:bg-surface-variant transition-colors" href="index.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Kembali</span>
+</a>
+</div>
+
+<!-- Profile Card Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-4 bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="w-32 h-32 rounded-full overflow-hidden mx-auto border-2 border-primary mb-4">
+<img alt="Elshanora Putri" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK2WoUYQMCbXUf0fandywbwy_pqW-jOsVS67kfD7bwRyYyuyGX1m3L22Nc8GYg45OXwTxTf08c2vrJWQR819VITnv73iXbkq1U1Fk-wS7hep_fszAU37cM26_JN_si_DTQDbl7pGa8_Nd9I5g1o_U6PGDTTkZWaafhCyjE2f5kuerMInH6_zdbzIlx6BlpuPK9cRKHW5hY-DTV5z7mUyYoQnQvV6q15_yVaf8xMeJpowR6xQyJAB2zrOwI0oqCcILjq8g4K2e1o0I"/>
+</div>
+<h3 class="text-headline-md font-bold text-primary">Elshanora Putri</h3>
+<p class="text-body-md text-on-surface-variant">Senior Vault Specialist</p>
+<span class="inline-block mt-3 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-semibold border border-secondary-fixed-dim">
+  Akses Brankas: Level 4 (Full Admin)
+</span>
+</div>
+
+<div class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="text-headline-md font-bold text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">manage_accounts</span> Detail Pengguna
+</h3>
+<form onsubmit="event.preventDefault(); showToast('Pengaturan profil berhasil diperbarui!');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="block text-label-lg text-primary mb-2">Nama Lengkap</label>
+<input class="w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 font-body-md" value="Elshanora Putri"/>
+</div>
+<div>
+<label class="block text-label-lg text-primary mb-2">Email Operasional</label>
+<input class="w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 font-body-md" value="elshanora.p@bankunit04.co.id"/>
+</div>
+<div>
+<label class="block text-label-lg text-primary mb-2">Unit Kerja</label>
+<input class="w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 font-body-md" disabled="" value="Unit Operasional 04 - Vault Alpha"/>
+</div>
+<div>
+<label class="block text-label-lg text-primary mb-2">Peran Sistem</label>
+<input class="w-full h-12 bg-surface border border-outline-variant rounded-lg px-4 font-body-md" disabled="" value="Archivist / Verifier"/>
+</div>
+</div>
+<button class="px-6 py-3 bg-primary text-on-primary rounded-lg font-bold hover:bg-tertiary transition-colors" type="submit">
+  Simpan Perubahan
+</button>
+</form>
+</div>
+</div>
+</main>
+</div>
+
+<script src="js/app.js"></script>
+</body></html>

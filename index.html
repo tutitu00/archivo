@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archivo Dasbor</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px; /* Default size */
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-container": "#003762",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#86a0cd",
+                        "on-surface": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#002045",
+                        "tertiary-fixed": "#d2e4ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-container": "#316e52",
+                        "on-secondary-fixed-variant": "#0e5138",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#adc7f7",
+                        "secondary-fixed-dim": "#95d4b3",
+                        "on-surface-variant": "#43474e",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-container": "#58a2f0",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "tertiary-fixed-dim": "#9fcaff",
+                        "secondary": "#2c694e",
+                        "primary-container": "#1a365d",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#b1f0ce",
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-container": "#aeeecb",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#adc7f7",
+                        "outline-variant": "#c4c6cf",
+                        "outline": "#74777f",
+                        "on-tertiary-fixed-variant": "#00497e",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#002114",
+                        "surface-tint": "#455f88",
+                        "tertiary": "#00213e",
+                        "on-tertiary-fixed": "#001d37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "touch-target-min": "48px",
+                        "unit": "8px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex">
+<!-- SideNavBar (Shared Component) -->
+<nav class="h-screen w-64 fixed left-0 top-0 border-r border-outline-variant bg-surface z-50">
+<div class="flex flex-col h-full p-unit">
+<!-- Brand Header -->
+<div class="px-4 py-6 mb-4">
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Archivo</h1>
+<p class="text-label-md font-label-md text-on-surface-variant mt-1">Unit Operasional 04</p>
+</div>
+<!-- Navigation Links -->
+<ul class="flex-1 space-y-2">
+<!-- Active: Dashboard -->
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold scale-95 duration-100 ease-in-out" href="index.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-label-lg font-label-lg">Dasbor</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-lg" href="tambah.html">
+<span class="material-symbols-outlined" data-icon="note_add">note_add</span>
+<span class="text-label-lg font-label-lg">Tambah Dokumen</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-lg" href="cari.html">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="text-label-lg font-label-lg">Cari &amp; Lacak</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-lg" href="log-audit.html">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-label-lg font-label-lg">Log Audit</span>
+</a>
+</li>
+</ul>
+<!-- Bottom Section -->
+<div class="mt-auto space-y-4">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-lg" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-lg font-label-lg">Pengaturan</span>
+</a>
+<a class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary h-touch-target-min rounded-lg hover:opacity-90 transition-opacity" href="tambah.html">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="text-label-lg font-label-lg">Entri Arsip Baru</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="ml-64 flex-1 flex flex-col min-h-screen">
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-surface-bright docked full-width top-0 sticky z-40 border-b border-outline-variant">
+<div class="flex justify-between items-center h-touch-target-min px-margin-desktop py-2">
+<!-- Search Bar Placeholder -->
+<div class="flex-1 flex items-center">
+<form class="relative w-96" onsubmit="event.preventDefault(); window.location.href='cari.html?q=' + encodeURIComponent(this.querySelector('input').value);">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-lg text-body-md font-body-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface" placeholder="Cari cepat dengan CIF atau ID Dok..." type="text"/>
+</form>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 p-2" onclick="window.location.href='log-audit.html'">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 p-2" onclick="alert('Bantuan Archivo BankDoc Tracker System v1.0')">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<a class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant ml-2 block cursor-pointer" href="pengaturan.html" title="Lihat Profil">
+<img alt="Staff User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK2WoUYQMCbXUf0fandywbwy_pqW-jOsVS67kfD7bwRyYyuyGX1m3L22Nc8GYg45OXwTxTf08c2vrJWQR819VITnv73iXbkq1U1Fk-wS7hep_fszAU37cM26_JN_si_DTQDbl7pGa8_Nd9I5g1o_U6PGDTTkZWaafhCyjE2f5kuerMInH6_zdbzIlx6BlpuPK9cRKHW5hY-DTV5z7mUyYoQnQvV6q15_yVaf8xMeJpowR6xQyJAB2zrOwI0oqCcILjq8g4K2e1o0I"/>
+</a>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto space-y-8">
+<!-- Page Header & Primary Action -->
+<div class="flex items-end justify-between">
+<div>
+<h2 class="text-headline-xl font-headline-xl text-primary">Ringkasan</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-2">Status Pengarsipan Dokumen Fisik</p>
+</div>
+<!-- Large Primary Action -->
+<a class="bg-primary text-on-primary h-16 px-8 rounded-xl flex items-center gap-3 hover:bg-tertiary-container transition-colors shadow-sm cursor-pointer" href="cari.html">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+<span class="text-headline-md font-headline-md">Pindai / Cari Cepat</span>
+</a>
+</div>
+<!-- High-Level Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<p class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-wider">Total Dokumen</p>
+<span class="material-symbols-outlined text-outline" data-icon="inventory_2">inventory_2</span>
+</div>
+<p class="text-headline-xl font-headline-xl text-primary mt-2" id="metric-total">12,450</p>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<p class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-wider">Menunggu Verifikasi</p>
+<span class="material-symbols-outlined text-error" data-icon="pending_actions">pending_actions</span>
+</div>
+<p class="text-headline-xl font-headline-xl text-error mt-2" id="metric-pending">154</p>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col justify-between h-32 relative overflow-hidden">
+<!-- Subtle background success tint -->
+<div class="absolute inset-0 bg-secondary opacity-5"></div>
+<div class="relative z-10 flex justify-between items-start">
+<p class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-wider">Berhasil Diarsip</p>
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+</div>
+<p class="text-headline-xl font-headline-xl text-secondary mt-2 relative z-10" id="metric-archived">12,296</p>
+</div>
+<!-- Metric Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<p class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-wider">Pergerakan Terbaru</p>
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="swap_horiz">swap_horiz</span>
+</div>
+<p class="text-headline-xl font-headline-xl text-on-primary-fixed-variant mt-2" id="metric-movements">42 <span class="text-label-lg font-label-lg text-on-surface-variant font-normal tracking-normal lowercase">hari ini</span></p>
+</div>
+</div>
+<!-- Activity Feed Section -->
+<div class="mt-8 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+<div class="px-6 py-4 border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<h3 class="text-headline-md font-headline-md text-primary">Check-in &amp; Pergerakan Terbaru (Dokumen Terbaru)</h3>
+<a class="text-label-lg font-label-lg text-on-tertiary-container hover:underline" href="log-audit.html">Lihat Semua Log</a>
+</div>
+<div class="p-2">
+<ul class="flex flex-col" id="recent-activity-list">
+<!-- Dynamically populated from localStorage via js/app.js -->
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const docs = getDocuments();
+    
+    // Calculate metrics
+    const totalCount = 12450 + docs.length;
+    const pendingCount = docs.filter(d => d.status === 'verification').length;
+    const archivedCount = totalCount - pendingCount;
+    
+    document.getElementById('metric-total').textContent = totalCount.toLocaleString();
+    document.getElementById('metric-pending').textContent = pendingCount.toLocaleString();
+    document.getElementById('metric-archived').textContent = archivedCount.toLocaleString();
+    document.getElementById('metric-movements').innerHTML = `${docs.length} <span class="text-label-lg font-label-lg text-on-surface-variant font-normal tracking-normal lowercase">hari ini</span>`;
+
+    // Render Recent Feed
+    const feedContainer = document.getElementById('recent-activity-list');
+    feedContainer.innerHTML = '';
+
+    docs.slice(0, 6).forEach(doc => {
+      let icon = 'move_to_inbox';
+      let iconBg = 'bg-secondary-container text-on-secondary-container';
+      let statusClass = 'text-on-surface-variant';
+      
+      if (doc.status === 'verification') {
+        icon = 'pending_actions';
+        iconBg = 'bg-error-container text-on-error-container';
+        statusClass = 'text-error';
+      } else if (doc.status === 'transition') {
+        icon = 'unarchive';
+        iconBg = 'bg-tertiary-fixed text-on-tertiary-fixed-variant';
+      }
+
+      const li = document.createElement('li');
+      li.className = 'flex items-start gap-4 p-4 hover:bg-surface-container-low transition-colors rounded-lg border-b border-outline-variant/30 last:border-0';
+      li.innerHTML = `
+        <div class="${iconBg} p-2 rounded-full flex-shrink-0 mt-1">
+          <span class="material-symbols-outlined text-[20px]" data-icon="${icon}">${icon}</span>
+        </div>
+        <div class="flex-1">
+          <p class="text-body-lg font-body-lg text-on-surface font-semibold">CIF ${doc.cif} - ${doc.customerName} (${doc.docType})</p>
+          <p class="text-body-md font-body-md ${statusClass}">${doc.status === 'verification' ? 'Dalam Verifikasi' : 'Lokasi: ' + doc.location}</p>
+        </div>
+        <div class="text-right">
+          <p class="text-label-md font-label-md text-outline">${doc.displayTime || 'Baru saja'}</p>
+          <p class="text-label-md font-label-md text-on-surface-variant mt-1">Oleh ${doc.staff || 'Staf Operasional'}</p>
+        </div>
+      `;
+      feedContainer.appendChild(li);
+    });
+  });
+</script>
+</body></html>

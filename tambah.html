@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tambah Dokumen - Archivo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-container": "#003762",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#86a0cd",
+                        "on-surface": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#002045",
+                        "tertiary-fixed": "#d2e4ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-container": "#316e52",
+                        "on-secondary-fixed-variant": "#0e5138",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#adc7f7",
+                        "secondary-fixed-dim": "#95d4b3",
+                        "on-surface-variant": "#43474e",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-container": "#58a2f0",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "tertiary-fixed-dim": "#9fcaff",
+                        "secondary": "#2c694e",
+                        "primary-container": "#1a365d",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#b1f0ce",
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-container": "#aeeecb",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#adc7f7",
+                        "outline-variant": "#c4c6cf",
+                        "outline": "#74777f",
+                        "on-tertiary-fixed-variant": "#00497e",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#002114",
+                        "surface-tint": "#455f88",
+                        "tertiary": "#00213e",
+                        "on-tertiary-fixed": "#001d37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "touch-target-min": "48px",
+                        "unit": "8px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .wizard-line { position: absolute; left: 24px; top: 48px; bottom: -16px; width: 2px; background-color: #e0e3e5; z-index: 0; }
+        .wizard-step:last-child .wizard-line { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface h-screen flex overflow-hidden">
+<aside class="bg-surface dark:bg-inverse-surface h-screen w-64 fixed left-0 top-0 border-r border-outline-variant dark:border-outline flex flex-col h-full p-unit z-50">
+<div class="px-4 py-6 mb-4">
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">Archivo</h1>
+<p class="text-label-lg font-label-lg text-on-surface-variant mt-1">Unit Operasional 04</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-label-lg font-label-lg">Dasbor</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold scale-95 duration-100 ease-in-out" href="tambah.html">
+<span class="material-symbols-outlined">note_add</span>
+<span class="text-label-lg font-label-lg">Tambah Dokumen</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="cari.html">
+<span class="material-symbols-outlined">location_on</span>
+<span class="text-label-lg font-label-lg">Cari &amp; Lacak</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="log-audit.html">
+<span class="material-symbols-outlined">history</span>
+<span class="text-label-lg font-label-lg">Log Audit</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors rounded-lg" href="pengaturan.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-lg font-label-lg">Pengaturan</span>
+</a>
+</nav>
+<div class="mt-auto pt-4">
+<a class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary h-touch-target-min rounded-lg text-label-lg font-label-lg hover:bg-tertiary-container transition-colors" href="tambah.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+                Entri Arsip Baru
+            </a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col min-w-0 h-full relative ml-64">
+<header class="bg-surface-bright dark:bg-surface-dim docked full-width top-0 sticky z-40 border-b border-outline-variant dark:border-outline flex justify-between items-center h-touch-target-min px-margin-desktop">
+<div class="flex items-center gap-4">
+<form class="relative w-64" onsubmit="event.preventDefault(); window.location.href='cari.html?q=' + encodeURIComponent(this.querySelector('input').value);">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low border border-transparent rounded-lg text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cari arsip..." type="text"/>
+</form>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high" onclick="window.location.href='log-audit.html'">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high" onclick="alert('Form Entri Dokumen Archivo')">
+<span class="material-symbols-outlined">help</span>
+</button>
+<a class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant block" href="pengaturan.html">
+<img alt="Elshanora Putri - Staff Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK2WoUYQMCbXUf0fandywbwy_pqW-jOsVS67kfD7bwRyYyuyGX1m3L22Nc8GYg45OXwTxTf08c2vrJWQR819VITnv73iXbkq1U1Fk-wS7hep_fszAU37cM26_JN_si_DTQDbl7pGa8_Nd9I5g1o_U6PGDTTkZWaafhCyjE2f5kuerMInH6_zdbzIlx6BlpuPK9cRKHW5hY-DTV5z7mUyYoQnQvV6q15_yVaf8xMeJpowR6xQyJAB2zrOwI0oqCcILjq8g4K2e1o0I"/>
+</a>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto bg-background p-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="mb-10 flex justify-between items-center">
+<div>
+<h2 class="text-headline-xl font-headline-xl text-primary mb-2">Daftarkan Dokumen (Input Dokumen)</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Lengkapi panduan pengarsipan fisik di bawah ini. Data disimpan ke sistem penyimpanan lokal (localStorage).</p>
+</div>
+<a class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-high text-primary font-semibold rounded-lg hover:bg-surface-variant transition-colors" href="index.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Kembali ke Dasbor</span>
+</a>
+</div>
+<form class="max-w-4xl space-y-12 pb-20" id="form-tambah-dokumen">
+<div class="relative pl-16 wizard-step">
+<div class="wizard-line"></div>
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center text-headline-md font-headline-md font-bold z-10 shadow-sm">1</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm">
+<h3 class="text-headline-md font-headline-md text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">person_book</span>
+                                Identifikasi Nasabah
+                            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-1">
+<label class="block text-headline-md font-headline-md text-primary mb-3">Nomor CIF <span class="text-error">*</span></label>
+<input class="w-full h-14 bg-surface border border-outline-variant rounded-lg px-4 text-body-lg font-body-lg focus:border-tertiary-container focus:ring-2 focus:ring-primary-fixed outline-none transition-all placeholder:text-outline-variant" id="input-cif" placeholder="msl. 0987654321" required="" type="text"/>
+</div>
+<div class="col-span-1">
+<label class="block text-headline-md font-headline-md text-primary mb-3">Nomor Rekening</label>
+<input class="w-full h-14 bg-surface border border-outline-variant rounded-lg px-4 text-body-lg font-body-lg focus:border-tertiary-container focus:ring-2 focus:ring-primary-fixed outline-none transition-all placeholder:text-outline-variant" id="input-account" placeholder="msl. 1234-5678-90" type="text"/>
+</div>
+<div class="col-span-1 md:col-span-2">
+<label class="block text-headline-md font-headline-md text-primary mb-3">Nama Lengkap Nasabah <span class="text-error">*</span></label>
+<input class="w-full h-14 bg-surface border border-outline-variant rounded-lg px-4 text-body-lg font-body-lg focus:border-tertiary-container focus:ring-2 focus:ring-primary-fixed outline-none transition-all placeholder:text-outline-variant" id="input-customer" placeholder="Masukkan nama sah sesuai dokumen" required="" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<div class="relative pl-16 wizard-step">
+<div class="wizard-line"></div>
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-surface-variant text-primary border border-outline-variant flex items-center justify-center text-headline-md font-headline-md font-bold z-10">2</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm">
+<h3 class="text-headline-md font-headline-md text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">category</span>
+                                Klasifikasi Dokumen
+                            </h3>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="doc_type" type="radio" value="ATM"/>
+<div class="h-24 rounded-lg border-2 border-outline-variant bg-surface flex flex-col items-center justify-center peer-checked:border-primary peer-checked:bg-primary-fixed peer-checked:text-primary transition-all hover:bg-surface-container-high px-2 text-center">
+<span class="material-symbols-outlined mb-1">credit_card</span>
+<span class="text-body-md font-body-md font-bold leading-tight">ATM</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="doc_type" type="radio" value="Reset PIN"/>
+<div class="h-24 rounded-lg border-2 border-outline-variant bg-surface flex flex-col items-center justify-center peer-checked:border-primary peer-checked:bg-primary-fixed peer-checked:text-primary transition-all hover:bg-surface-container-high px-2 text-center">
+<span class="material-symbols-outlined mb-1">lock</span>
+<span class="text-body-md font-body-md font-bold leading-tight">Reset PIN</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="doc_type" type="radio" value="Pengaduan Nasabah"/>
+<div class="h-24 rounded-lg border-2 border-outline-variant bg-surface flex flex-col items-center justify-center peer-checked:border-primary peer-checked:bg-primary-fixed peer-checked:text-primary transition-all hover:bg-surface-container-high px-2 text-center">
+<span class="material-symbols-outlined mb-1">support_agent</span>
+<span class="text-body-md font-body-md font-bold leading-tight">Pengaduan Nasabah</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="doc_type" type="radio" value="Tabungan"/>
+<div class="h-24 rounded-lg border-2 border-outline-variant bg-surface flex flex-col items-center justify-center peer-checked:border-primary peer-checked:bg-primary-fixed peer-checked:text-primary transition-all hover:bg-surface-container-high px-2 text-center">
+<span class="material-symbols-outlined mb-1">account_balance_wallet</span>
+<span class="text-body-md font-body-md font-bold leading-tight">Tabungan</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="relative pl-16 wizard-step">
+<div class="wizard-line"></div>
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-surface-variant text-primary border border-outline-variant flex items-center justify-center text-headline-md font-headline-md font-bold z-10">3</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm">
+<h3 class="text-headline-md font-headline-md text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">inventory_2</span>
+                                Penempatan Lokasi Fisik
+                            </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="col-span-1">
+<label class="block text-headline-md font-headline-md text-primary mb-3">ID Kabinet</label>
+<div class="relative">
+<select class="w-full h-14 bg-surface border border-outline-variant rounded-lg pl-4 pr-10 text-body-lg font-body-lg appearance-none focus:border-tertiary-container focus:ring-2 focus:ring-primary-fixed outline-none transition-all" id="input-cabinet">
+<option value="CAB-A1">CAB-A1 (North Wing)</option>
+<option value="CAB-A2">CAB-A2 (North Wing)</option>
+<option value="CAB-B1">CAB-B1 (South Wing)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="col-span-1">
+<label class="block text-headline-md font-headline-md text-primary mb-3">Baris Rak</label>
+<div class="relative">
+<select class="w-full h-14 bg-surface border border-outline-variant rounded-lg pl-4 pr-10 text-body-lg font-body-lg appearance-none focus:border-tertiary-container focus:ring-2 focus:ring-primary-fixed outline-none transition-all" id="input-rack">
+<option value="R1">Row 1 (Top)</option>
+<option value="R2">Row 2</option>
+<option value="R3">Row 3</option>
+<option value="R4">Row 4 (Bottom)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="col-span-1">
+<label class="block text-headline-md font-headline-md text-primary mb-3">Kode Map</label>
+<input class="w-full h-14 bg-surface border border-outline-variant rounded-lg px-4 text-body-lg font-body-lg focus:border-tertiary-container focus:ring-2 focus:ring-primary-fixed outline-none transition-all placeholder:text-outline-variant" id="input-folder" placeholder="msl. FLD-882" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<div class="relative pl-16 wizard-step">
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-surface-variant text-primary border border-outline-variant flex items-center justify-center text-headline-md font-headline-md font-bold z-10">4</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+<div class="flex-1">
+<h3 class="text-headline-md font-headline-md text-primary mb-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">verified</span>
+                                    Status Dokumen
+                                </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Atur status awal dokumen fisik ini di dalam brankas.</p>
+<div class="inline-flex bg-surface-container-low p-1 rounded-lg border border-outline-variant">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="status" type="radio" value="verification"/>
+<div class="px-6 py-3 rounded-md text-label-lg font-label-lg font-bold text-on-surface-variant peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+                                            Dalam Verifikasi
+                                        </div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="status" type="radio" value="archived"/>
+<div class="px-6 py-3 rounded-md text-label-lg font-label-lg font-bold text-on-surface-variant peer-checked:bg-secondary-fixed peer-checked:text-on-secondary-fixed peer-checked:shadow-sm transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                                            Diarsipkan
+                                        </div>
+</label>
+</div>
+</div>
+<div class="w-full md:w-auto flex-shrink-0 border-t md:border-t-0 md:border-l border-outline-variant pt-6 md:pt-0 md:pl-8">
+<button class="w-full md:w-auto px-8 h-16 bg-primary text-on-primary rounded-lg flex items-center justify-center gap-3 hover:bg-tertiary-container transition-all shadow-md hover:shadow-lg active:scale-95 cursor-pointer" id="btn-save-doc" type="submit">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">save</span>
+<span class="text-headline-md font-headline-md font-bold">Simpan Dokumen</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</main>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form-tambah-dokumen');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const cif = document.getElementById('input-cif').value.trim();
+      const account = document.getElementById('input-account').value.trim();
+      const customerName = document.getElementById('input-customer').value.trim();
+      
+      const docTypeEl = document.querySelector('input[name="doc_type"]:checked');
+      const docType = docTypeEl ? docTypeEl.value : 'Tabungan';
+
+      const cabinet = document.getElementById('input-cabinet').value;
+      const rack = document.getElementById('input-rack').value;
+      const folderCode = document.getElementById('input-folder').value.trim() || 'FLD-' + Math.floor(100 + Math.random() * 900);
+
+      const statusEl = document.querySelector('input[name="status"]:checked');
+      const status = statusEl ? statusEl.value : 'verification';
+
+      if (!cif || !customerName) {
+        showToast('Mohon isi Nomor CIF dan Nama Nasabah!', 'error');
+        return;
+      }
+
+      // Save to localStorage
+      const newDoc = saveDocument({
+        cif,
+        account,
+        customerName,
+        docType,
+        cabinet,
+        rack,
+        folderCode,
+        status
+      });
+
+      showToast(`Dokumen CIF ${cif} berhasil disimpan!`);
+
+      // Reset Form fields
+      form.reset();
+
+      // Redirect after 1.2s to dashboard to view new entry
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1200);
+    });
+  });
+</script>
+</body></html>
