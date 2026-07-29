@@ -322,8 +322,9 @@
               <p class="text-label-md font-label-md text-outline">Lokasi Penyimpanan</p>
               <p class="text-body-md font-body-md font-bold text-primary">${doc.location}</p>
             </div>
-            <button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-label-lg font-label-lg hover:bg-tertiary transition-colors" onclick="showToast('Dokumen ${doc.id} siap untuk diambil/diverifikasi')">
-              Lihat Detail
+            <button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-label-lg font-label-lg hover:bg-tertiary transition-colors flex items-center gap-1.5" onclick="openEditModal('${doc.id}', renderResults)">
+              <span class="material-symbols-outlined text-[18px]">edit_note</span>
+              Edit & Detail
             </button>
           </div>
         `;
